@@ -3,7 +3,7 @@ import PyPDF2
 # PDF File Path
 pdf_path = 'ReferencePdf.pdf'
 
-# Extablish PDF
+# Establish PDF
 pdfFileObject = open(pdf_path, 'rb')
 pdfReader = PyPDF2.PdfFileReader(pdfFileObject)
 count = pdfReader.numPages
