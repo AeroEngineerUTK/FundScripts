@@ -1,0 +1,17 @@
+import PyPDF2
+
+# PDF File Path
+pdf_path = 'ReferencePdf.pdf'
+
+# Extablish PDF
+pdfFileObject = open(pdf_path, 'rb')
+pdfReader = PyPDF2.PdfFileReader(pdfFileObject)
+count = pdfReader.numPages
+
+# Write PDF Data to File
+with open('PDF2Text.txt', 'w') as f:
+    for i in range(count):
+        page = pdfReader.getPage(i)
+        txt = (page.extractText())
+        f.write(txt)
+    f.close()
