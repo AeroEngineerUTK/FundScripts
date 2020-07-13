@@ -1,0 +1,40 @@
+##############################
+# Excel: Read/Write/Execute  #
+# Author: Mikhail LaMay      #
+# Date: 7/13/2020            #
+##############################
+#    pip install openpyxl    #
+##############################
+
+from openpyxl import Workbook
+
+# Define Workbook & Select Active Sheet
+workbook = Workbook()
+sheet = workbook.active
+
+# Print string to specified cell
+wA1 = sheet["A1"] = "hello"
+wB1 = sheet["B1"] = "world!"
+
+# Save the workbook
+workbook.save(filename="hello_world.xlsx")
+
+'''------------------------------------------------------------------------'''
+
+from openpyxl import load_workbook
+
+# Open spreadsheet
+workbook = load_workbook(filename="hello_world.xlsx")
+workbook.sheetnames
+
+# Selects the first availible sheet
+sheet = workbook.active
+
+# Sheet Title
+sheet.title
+
+# Recieve Data
+sheet["A1"]
+
+# The Data Value
+sheet["A1"].value
