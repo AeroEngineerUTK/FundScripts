@@ -1,0 +1,27 @@
+# Loving Script to find how long it has been since I first saw her beautiful eyes
+
+# Space for paragraph
+print()
+
+# Print statement
+print('How long have I been with the most beautiful girl in the world :)')
+
+# Import required libraries
+from datetime import date
+
+# Setting up current date
+now = date.today()
+
+# First date calculation
+FirstDate = date(2016, 3, 26)
+age = now - FirstDate
+AmDays = age.days
+AmYears = AmDays/365.25
+AmHrs = AmDays*24
+AmSecs = AmHrs*3600
+
+# Space for paragraph
+print()
+
+# Final results with message
+print(AmYears,'Years', ',', AmDays, 'Days',',', AmHrs, 'Hours', ',', AmSecs, 'Seconds')
